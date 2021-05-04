@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let string = +prompt("Nhap ");
+    let arr = [];
+    for (let i = 0; i < string; i++) {
+        arr[i] = prompt("Nhap cac ky tu")
+    }
+
+    function findVowels() {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == 'a' || arr[i] == 'o' || arr[i] == 'e' || arr[i] == 'u' || arr[i] == 'i') {
+                count++;
+            }
+        }
+        if (count == 0) {
+            return false;
+        }
+        return count;
+    }
+if(findVowels()) {
+    document.write("mảng có " + findVowels(arr) + " ký tự nguyên âm")
+}else {
+    document.write("mảng không có ký tự nguyên âm")
+}
+</script>
+</html>

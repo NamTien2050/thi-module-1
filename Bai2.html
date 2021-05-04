@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let num = +prompt("Nhap");
+    let arr = [15, 17, 19, 21, 45];
+    let result = checkNum(arr, num);
+
+    function checkNum(arr, num) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (num == arr[i]) {
+                count++;
+                return i;
+            }
+        }
+        if (count == 0) {
+            return false;
+        }
+    }
+
+    document.write(num + " o vi tri thu " + result);
+</script>
+</body>
+</html>
